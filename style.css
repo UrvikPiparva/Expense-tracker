@@ -1,0 +1,167 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --tertiary-color: #e74c3c;
+  --background-color: #f5f5f5;
+  --card-background: #ffffff;
+  --text-color: #333;
+  --heading-color: #222;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: var(--font-family);
+  color: var(--text-color);
+}
+
+.container {
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  width: 360px;
+  margin: 20px auto;
+}
+
+h1 {
+  color: var(--heading-color);
+  font-size: 2rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+h3 {
+  border-bottom: 2px solid var(--text-color);
+  padding-bottom: 10px;
+  margin: 30px 0 15px;
+  font-size: 1.5rem;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.inc-exp-container {
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+.money {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.money-plus {
+  color: var(--secondary-color);
+}
+
+.money-minus {
+  color: var(--tertiary-color);
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="number"] {
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  display: block;
+  font-size: 1rem;
+  padding: 10px;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: 0;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-shadow: var(--box-shadow);
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.list li {
+  background-color: var(--card-background);
+  border-radius: 4px;
+  box-shadow: var(--box-shadow);
+  padding: 10px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  font-size: 1rem;
+}
+
+.list li.plus {
+  border-left: 5px solid var(--secondary-color);
+}
+
+.list li.minus {
+  border-left: 5px solid var(--tertiary-color);
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: var(--tertiary-color);
+  color: #fff;
+  border: none;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 1rem;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+}
